@@ -5,7 +5,10 @@ var GuessTheNumber = require("./GuessTheNumber");
 var YouClicked = require('./YouClicked');
 var CharacterCounter = require('./CharacterCounter');
 var CharacterLimit = require('./CharacterLimit');
-var NumberGuessing = require('./NumberGuessing')
+var NumberGuessing = require('./NumberGuessing');
+const GitHubProfile = require('./GitHubProfile');
+const GithubSearch = require('./GitHubSearch');
+
 var imageList = [
   {id: 42, source: "http://placekitten.com/g/210/210", text: "Hello kittenz!"},
   {id: 43, source: "https://facebook.github.io/react/img/logo.svg", text: "React Logo"},
@@ -52,6 +55,10 @@ var App = React.createClass({
         <CharacterLimit limit = {140}/>
         <hr/>
         <NumberGuessing number = {Math.floor(Math.random() * 100)}/>
+        <hr/>
+        <GitHubProfile username = "connman" />
+        <hr/>
+        <GithubSearch />
       </main>
     );
   }
